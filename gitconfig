@@ -1,6 +1,6 @@
 [user]
-  name =  "TODO: PUT YOUR NAME HERE WITHOUT ACCENTS"
-  email = "TODO: PUT YOUR GITHUB ACCOUNT EMAIL HERE"
+  name =  arnaudbouffard
+  email = arn0n0@hotmail.com
 
 [color]
   branch = auto
@@ -47,3 +47,8 @@
 
 [push]
 	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+[help]
+	autocorrect = 0
