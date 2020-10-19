@@ -1,13 +1,13 @@
 [user]
-  name =  arnaudbouffard
-  email = arn0n0@hotmail.com
+	name = arnaudbouffard
+	email = arnaud.bouffard@m4x.org
 
 [color]
   branch = auto
   diff = auto
   interactive = auto
   status = auto
-  ui = auto
+	ui = true
 
 [color "branch"]
   current = green
@@ -16,6 +16,7 @@
 [core]
   editor = nano
   pager = less -FRSX
+	excludesfile = /Users/arnaudbouffard/.gitignore_global
 
 [alias]
   co = checkout
@@ -52,3 +53,14 @@
 	smudge = git-media-smudge %f
 [help]
 	autocorrect = 0
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
